@@ -19,7 +19,44 @@ include __DIR__ . '/db.php';
     <h1>BUKINGHE</h1>
     </header>
     <main>
-
+    <section>
+            <form action='./index.php' method="GET" class="d-flex align-items-center g-3 mb-4">
+                <div class="col-md-3">
+                    <label for="parking" class="form-label">Parking</label>
+                    <select name="parking" id="parking" class="form-select">
+                        <option value="" selected>All</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="rating" class="form-label">Rating</label>
+                    <input type='number' name='rating' id='rating' class="form-control" placeholder='Sort by rating from 0 to 5' min="0" max="5">
+                </div>
+                <div class="col-12">
+                    <button type='submit' class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </section>
+            
+        <section class="card width: 10rem;">
+            <?php 
+            foreach ($hotels as $hotel) {
+                echo '<div class="card-header">';
+                echo '<h2>' . $hotel['name'] . '</h2>';            
+                ?>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><?php 
+                        echo '<p>' . 'Vote:' . ' '  .   $hotel['vote'] . '</p>';
+                        ?> </li>
+                    <li class="list-group-item"><?php
+                        echo '<p>' . 'Distance to the center:' . ' ' . $hotel ['distance_to_center'] . 'km' . '</p>';
+                    ?> </li>
+                    <?php
+                        echo '</div>';
+            } ?>
+                </ul>
+        </section>
     </main> 
     <footer>
 

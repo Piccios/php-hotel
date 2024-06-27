@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+}
+section.card{
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.card ul{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    width: calc(100% - 15px);
+}
