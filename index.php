@@ -22,9 +22,9 @@ include __DIR__ . '/db.php';
     </header>
     <main>
         <section>
-            <form action='./index.php' method="GET" class="d-flex flex-column g-3 mb-4">
+            <form action='./index.php' method="GET" class="d-flex flex-column mb-5">
                 <div class="d-flex justify-content-center">
-                    <div class="w-25 ">
+                    <div class="filter">
                         <label for="parking" class="form-label">Parking</label>
                         <select name="parking" id="parking" class="form-select">
                             <option value="" selected>All</option>
@@ -32,27 +32,27 @@ include __DIR__ . '/db.php';
                             <option value="0">No</option>
                         </select>
                     </div>
-                    <div class="w-25">
+                    <div class="filter">
                         <label for="rating" class="form-label">Rating</label>
                         <input type='number' name='rating' id='rating' class="form-control" placeholder='Sort by rating from 0 to 5' min="0" max="5">
                     </div>
 
                 </div>
 
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center mt-3">
                     <button type='submit' class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </section>
 
-        <section class="card width: 10rem;">
+        <section class="card">
             <?php
             foreach ($hotels as $hotel) {
                 if (isset($_GET['parking']) && $_GET['parking'] !== '' && $hotel['parking'] != $_GET['parking']) {
-                    continue;
+                continue;
                 }
                 if (isset($_GET['rating']) && $_GET['rating'] !== '' && $hotel['vote'] < $_GET['rating']) {
-                    continue;
+                continue;
                 }
                 echo '<div class="card-header">';
                 echo '<h2>' . $hotel['name'] . '</h2>';

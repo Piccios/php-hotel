@@ -9,6 +9,7 @@ header{
     justify-content: center;
     margin: 5rem;
 }
+
 section.card{
     width: 300px;
     margin: 0 auto;
@@ -22,4 +23,8 @@ section.card ul{
 
 li{
     width: calc(100% - 15px);
+}
+
+.filter{
+    width: 300px;
 }
