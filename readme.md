@@ -1,12 +1,24 @@
 Partiamo da questo array di hotel: https://www.codepile.net/pile/OEWY7Q1G
-Milestone 1
-Stampare tutti i nostri hotel con tutti i dati disponibili. Iniziate in modo graduale.
-Prima stampate in pagina i dati, senza preoccuparvi dello stile.
-Dopo aggiungete Bootstrap e mostrate le informazioni con una tabella.
-Milestone 2
-Aggiungere un form ad inizio pagina che tramite una richiesta GET permetta di filtrare gli hotel che hanno un parcheggio.
-Milestone 3 
-Aggiungere un secondo campo al form che permetta di filtrare gli hotel per voto (es. inserisco 3 ed ottengo tutti gli hotel che hanno un voto di tre stelle o superiore)
-NOTA:
-deve essere possibile utilizzare entrambi i filtri contemporaneamente (es. ottenere una lista con hotel che dispongono di parcheggio e
-che hanno un voto di tre stelle o superiore) Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gli hotel.
+
+Task:
+
+Milestone 1:
+
+    1. inportare i dati del file db.php nell'index tramite "include"
+
+    2. stampare i dati in pagina:
+        - con un ciclo foreach stampare tutti gli hotel con i rispettivi dati
+
+    3. Implementare Bootstrap:
+        - stilizzare delle tabelle per ogni hotel
+
+Milestone 2:
+    4. Aggiungere un form che permetta all'utente filtrare gli hotel che hanno un parcheggio
+
+Milestone 3:
+    5. Aggiungere un secondo form per filtrare gli hotel in base al voto
+
+----- INFO -----
+
+Entrambi i filtri devono essere utilizzabili contemporaneamente (es. ottenere una lista con hotel che dispongono di parcheggio e con voto superiore a 3)
+Se non viene specificato nessun filtro, tutti gli hotel verranno stampati in pagina
