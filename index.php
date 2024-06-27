@@ -48,6 +48,12 @@ include __DIR__ . '/db.php';
         <section class="card width: 10rem;">
             <?php
             foreach ($hotels as $hotel) {
+                if (isset($_GET['parking']) && $_GET['parking'] !== '' && $hotel['parking'] != $_GET['parking']) {
+                    continue;
+                }
+                if (isset($_GET['rating']) && $_GET['rating'] !== '' && $hotel['vote'] < $_GET['rating']) {
+                    continue;
+                }
                 echo '<div class="card-header">';
                 echo '<h2>' . $hotel['name'] . '</h2>';
             ?>
